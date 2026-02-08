@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crochê by Isa</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f8f5f1;
+    color: #6f4e37;
+    scroll-behavior: smooth;
+}
+
+/* HEADER INICIAL */
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #f7f7ce;
+    z-index: 1000;
+    transition: all 0.4s ease;
+    min-height: 260px;
+}
+
+.header-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+
+header img {
+    width: 240px;
+    transition: all 0.4s ease;
+}
+
+/* NAV INICIAL */
+nav {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+}
+
+/* HEADER AO ROLAR */
+header.fixed {
+    position: fixed;
+    padding: 10px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    min-height: auto;
+}
+
+header.fixed .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header.fixed img {
+    width: 120px;
+}
+
+header.fixed nav {
+    position: static;
+    transform: none;
+}
+
+/* SEÇÕES */
+section {
+    padding: 120px 20px 100px;
+    text-align: center;
+}
+
+section:nth-of-type(even) {
+    background-color: #eaf2ec;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* ===== CARDS DE PRODUTO ===== */
+
+.produtos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.produto-card {
+    width: 280px;
+    background-color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #6f4e37;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    text-align: center;
+    padding: 30px 20px 25px;
+}
+
+.produto-card img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+    transition: transform 0.4s ease;
+}
+
+.produto-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* EFEITO HOVER */
+.produto-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.produto-card:hover img {
+    transform: scale(1.08);
+}
+
+/* BOTÃO WHATSAPP */
+.whatsapp-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 30px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+footer {
+    background-color: #6b8f71;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+</style>
+</head>
+
+<body>
+
+<header id="header">
+    <div class="header-container">
+        <img src="assets/croche.png" alt="Crochê by Isa">
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#produto">Produtos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </div>
+</header>
+
+<section id="sobre">
+    <h2>Sobre</h2>
+    <p>
+        O Crochê by Isa nasce do amor pelo feito à mão.
+        Cada peça é produzida com carinho e dedicação.
+    </p>
+</section>
+
+<section id="produto">
+    <h2>Produtos</h2>
+
+    <div class="produtos-grid">
+
+        <a href="tapetes.html" class="produto-card">
+            <img src="assets/tapetes.jpeg" alt="Tapetes de Crochê">
+            <h3>Tapetes</h3>
+        </a>
+
+        <a href="souplat.html" class="produto-card">
+            <img src="assets/sousplat.jpeg" alt="Souplats de Crochê">
+            <h3>Sousplat</h3>
+        </a>
+
+    </div>
+</section>
+
+<section id="contato">
+    <h2>Contato</h2>
+    <p>Fale pelo WhatsApp 💚</p>
+    <a class="whatsapp-btn"
+       href="https://wa.me/+5531975947578"
+       target="_blank">
+       Falar no WhatsApp
+    </a>
+</section>
+
+<footer>
+    © 2026 Crochê by Isa
+</footer>
+
+<script>
+const header = document.getElementById("header");
+
+/* Compensa altura inicial */
+window.addEventListener("load", function() {
+    document.body.style.marginTop = header.offsetHeight + "px";
+});
+
+window.addEventListener("scroll", function() {
+    if (window.scrollY > 80) {
+        header.classList.add("fixed");
+    } else {
+        header.classList.remove("fixed");
+    }
+});
+</script>
+
+</body>
+</html>

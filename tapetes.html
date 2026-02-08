@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tapetes - Crochê by Isa</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f8f5f1;
+    color: #6f4e37;
+}
+
+/* HEADER PADRÃO */
+header {
+    background-color: #f7f7ce;
+    padding: 20px;
+    text-align: center;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* TÍTULO */
+h1 {
+    text-align: center;
+    margin: 50px 0 30px;
+}
+
+/* GRID */
+.produtos-container {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    padding-bottom: 80px;
+}
+
+/* CARD */
+.produto-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease;
+}
+
+.produto-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* OVERLAY */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(to top,#eaf2ec, #eaf2ec);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: height 0.4s ease;
+    padding: 20px;
+}
+
+.overlay h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.overlay p {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.overlay a {
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+/* HOVER */
+.produto-card:hover {
+    transform: scale(1.05);
+}
+
+.produto-card:hover img {
+    transform: scale(1.08);
+}
+
+.produto-card:hover .overlay {
+    height: 100%;
+}
+
+/* FOOTER */
+footer {
+    background-color: #6b8f71;
+    padding: 15px;
+    text-align: center;
+    color: white;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <a href="index.html">← Voltar para a loja</a>
+</header>
+
+<h1>Tapetes</h1>
+
+<div class="produtos-container">
+
+    <!-- PRODUTO 1 -->
+    <div class="produto-card">
+        <img src="assets/tapete1.jpg" alt="Tapete Floral">
+        <div class="overlay">
+            <h3>Tapete Floral</h3>
+            <p>R$ 149,90</p>
+            <a href="https://wa.me/+5531975947578?text=Olá, tenho interesse no Tapete Floral" target="_blank">
+                Falar no WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- PRODUTO 2 -->
+    <div class="produto-card">
+        <img src="assets/tapete2.jpg" alt="Tapete Redondo">
+        <div class="overlay">
+            <h3>Tapete Redondo</h3>
+            <p>R$ 179,90</p>
+            <a href="https://wa.me/+5531975947578?text=Olá, tenho interesse no Tapete Redondo" target="_blank">
+                Falar no WhatsApp
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+© 2026 Crochê by Isa
+</footer>
+
+</body>
+</html>
