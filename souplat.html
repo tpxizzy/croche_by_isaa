@@ -18,9 +18,9 @@ body {
     color: #6f4e37;
 }
 
-/* HEADER PADRÃO */
+/* HEADER */
 header {
-    background-color:  #f7f7ce;
+    background-color: #f7f7ce;
     padding: 20px;
     text-align: center;
 }
@@ -43,7 +43,7 @@ h1 {
     width: 90%;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
     padding-bottom: 80px;
 }
@@ -58,10 +58,10 @@ h1 {
     transition: transform 0.4s ease;
 }
 
+/* IMAGEM SEM ALTURA FIXA */
 .produto-card img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: 550px; /* deixa a imagem definir o tamanho */
     display: block;
     transition: transform 0.4s ease;
 }
@@ -73,7 +73,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 0%;
-    background: linear-gradient(to top, #eaf2ec, #eaf2ec);
+    background: rgba(234, 242, 236, 0.95);
     color: black;
     display: flex;
     flex-direction: column;
@@ -109,11 +109,11 @@ h1 {
 
 /* HOVER */
 .produto-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .produto-card:hover img {
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
 
 .produto-card:hover .overlay {
@@ -140,25 +140,23 @@ footer {
 
 <div class="produtos-container">
 
-    <!-- PRODUTO 1 -->
     <div class="produto-card">
-        <img src="assets/souplat1.jpg" alt="Sousplat Floral">
+        <img src="assets/sousplat1.jpeg" alt="Sousplat Floral">
         <div class="overlay">
-            <h3>Sousplat Floral</h3>
+            <h3>Sousplat Encanto</h3>
             <p>R$ 39,90</p>
-            <a href="https://wa.me/+5531975947578?text=Olá, tenho interesse no Sousplat Floral" target="_blank">
+            <a href="https://wa.me/5531975947578?text=Olá, tenho interesse no Sousplat Encanto" target="_blank">
                 Falar no WhatsApp
             </a>
         </div>
     </div>
 
-    <!-- PRODUTO 2 -->
     <div class="produto-card">
-        <img src="assets/souplat2.jpg" alt="Sousplat Rosa Pastel">
+        <img src="assets/sousplat2.jpeg" alt="Sousplat Rosa Pastel">
         <div class="overlay">
-            <h3>Sousplat Rosa Pastel</h3>
+            <h3>Sousplat Tulipas</h3>
             <p>R$ 44,90</p>
-            <a href="https://wa.me/+5531975947578?text=Olá, tenho interesse no Sousplat Rosa Pastel" target="_blank">
+            <a href="https://wa.me/5531975947578?text=Olá, tenho interesse no Sousplat Tulipas" target="_blank">
                 Falar no WhatsApp
             </a>
         </div>

@@ -18,7 +18,7 @@ body {
     color: #6f4e37;
 }
 
-/* HEADER PADRÃO */
+/* HEADER */
 header {
     background-color: #f7f7ce;
     padding: 20px;
@@ -41,9 +41,9 @@ h1 {
 /* GRID */
 .produtos-container {
     width: 90%;
-    margin: auto;
+    margin:  auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
     padding-bottom: 80px;
 }
@@ -58,10 +58,10 @@ h1 {
     transition: transform 0.4s ease;
 }
 
+/* IMAGEM SEM ALTURA FIXA */
 .produto-card img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: 550px; /* deixa a imagem definir o tamanho */
     display: block;
     transition: transform 0.4s ease;
 }
@@ -73,8 +73,8 @@ h1 {
     left: 0;
     width: 100%;
     height: 0%;
-    background: linear-gradient(to top,#eaf2ec, #eaf2ec);
-    color: white;
+    background: rgba(234, 242, 236, 0.95);
+    color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -100,15 +100,20 @@ h1 {
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 25px;
+    transition: 0.3s;
+}
+
+.overlay a:hover {
+    background-color: #1ebe5d;
 }
 
 /* HOVER */
 .produto-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .produto-card:hover img {
-    transform: scale(1.08);
+    transform: scale(1.05);
 }
 
 .produto-card:hover .overlay {
@@ -135,25 +140,45 @@ footer {
 
 <div class="produtos-container">
 
-    <!-- PRODUTO 1 -->
     <div class="produto-card">
-        <img src="assets/tapete1.jpg" alt="Tapete Floral">
+        <img src="assets/tapete1.jpeg" alt="Tapete espiral">
         <div class="overlay">
-            <h3>Tapete Floral</h3>
-            <p>R$ 149,90</p>
-            <a href="https://wa.me/+5531975947578?text=Olá, tenho interesse no Tapete Floral" target="_blank">
+            <h3>Tapete Espiral</h3>
+            <p>R$ 30,00</p>
+            <a href="https://wa.me/5531975947578?text=Olá, tenho interesse no Tapete Espiral" target="_blank">
                 Falar no WhatsApp
             </a>
         </div>
     </div>
 
-    <!-- PRODUTO 2 -->
     <div class="produto-card">
-        <img src="assets/tapete2.jpg" alt="Tapete Redondo">
+        <img src="assets/tapete2.jpeg" alt="Tapete Botão de Rubi">
         <div class="overlay">
-            <h3>Tapete Redondo</h3>
-            <p>R$ 179,90</p>
-            <a href="https://wa.me/+5531975947578?text=Olá, tenho interesse no Tapete Redondo" target="_blank">
+            <h3>Tapete Botão de Rubi</h3>
+            <p>R$ 30,00</p>
+            <a href="https://wa.me/5531975947578?text=Olá, tenho interesse no Tapete Botão de Rubi" target="_blank">
+                Falar no WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <div class="produto-card">
+        <img src="assets/tapete3.jpeg" alt="Tapete Espiral">
+        <div class="overlay">
+            <h3>Tapete Espiral</h3>
+            <p>R$ 30,00</p>
+            <a href="https://wa.me/5531975947578?text=Olá, tenho interesse no Tapete Espiral" target="_blank">
+                Falar no WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <div class="produto-card">
+        <img src="assets/tapete4.jpeg" alt="Tapete Paixão">
+        <div class="overlay">
+            <h3>Tapete Paixão</h3>
+            <p>R$ 30,00</p>
+            <a href="https://wa.me/5531975947578?text=Olá, tenho interesse no Tapete Paixão" target="_blank">
                 Falar no WhatsApp
             </a>
         </div>
